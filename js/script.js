@@ -84,13 +84,13 @@ for (const letter of wordArray) {
     revealWord.push("●");
  }
 }
-//  console.log(revealWord);
+// console.log(revealWord);
 wordProgress.innerText = revealWord.join("");
 checkIfWin();
 };
 
 const checkIfWin = function() {
- if (word.toUpperCase() === updateWordInProgress.innerText) {
+ if (word.toUpperCase() === wordProgress.innerText) {
   message.classList.add("win");
   message.innerHTML = `<p class="highlight"> You guessed correct the word! Congrats!</p>`;
  }
